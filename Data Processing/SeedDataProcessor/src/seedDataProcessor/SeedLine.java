@@ -339,12 +339,8 @@ public class SeedLine {
 			try {
 				field.set(this, field.get(other));
 			}//end trying to field of this to value in other
-			catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			}//end catching IllegalArgumentExceptions
-			catch (IllegalAccessException e) {
-				e.printStackTrace();
-			}//end catching IllegalAccessExceptions
+			catch (IllegalArgumentException e) {}
+			catch (IllegalAccessException e) {}
 		}//end looping over each public field in this class
 		this.currentSeedOwner = Seed.blankSeed();
 	}//end 1-arg copy constructor
