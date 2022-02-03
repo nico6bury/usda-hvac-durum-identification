@@ -303,6 +303,22 @@ public class SeedLine {
 				key + " is invalid and cannot be added.");
 		}//end catching noSuchFieldExceptions 
 	}//end putColumnAlias(key, value)
+
+	/**
+	 * Initializes column aliases with the default
+	 */
+	public static void putDefaultColumnAlias(){
+		// this is just hardcoded for now
+		String[] aliases = {"Area","X","Y","Perim.","Major",
+		"Minor","Angle","Circ.","AR","Round","Solidity"};
+		String[] fieldNames = {"area","x","y","perim","major",
+		"minor","angle","circ","ar","round","solidity"};
+		for(int i = 0; i < aliases.length; i++){
+			try {
+				SeedLine.putColumnAlias(aliases[i], fieldNames[i]);
+			} catch (NoSuchFieldException e) {}
+		}//end adding each alias
+	}//end putDefaultColumnAlias()
 	
 	/**
 	 * The default/empty constructor. Sets all fields to their
