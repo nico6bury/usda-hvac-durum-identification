@@ -1,8 +1,8 @@
 package seedDataProcessor;
 
 import java.lang.reflect.*;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * This class represents all the data
@@ -330,7 +330,6 @@ public class SeedLine {
 				e.printStackTrace();
 			}//end catching IllegalAccessExceptions
 		}//end looping over each public field in this class
-		// TODO update currentSeed (and also Javadoc for seed stuff)
 		this.currentSeedOwner = Seed.blankSeed();
 	}//end 1-arg copy constructor
 	
@@ -407,8 +406,8 @@ public class SeedLine {
 	 * @see #getColumnAlias(String)
 	 * @see #putColumnAlias(String, String)
 	 */
-	public SeedLine(ArrayList<String> columns,
-			ArrayList<String> data, int lineNum) {
+	public SeedLine(List<String> columns,
+			List<String> data, int lineNum) {
 		if(columns.size() != data.size()) {
 			throw new IllegalArgumentException("The size of columns is "
 				+ columns.size() + ", but the size of data is " +
@@ -502,6 +501,7 @@ public class SeedLine {
 	 * no really any particular order to the aliassed fields rn,
 	 * so watch out for that.
 	 */
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(lineNum + "\n");
