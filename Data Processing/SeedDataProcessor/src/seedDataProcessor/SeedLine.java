@@ -435,10 +435,10 @@ public class SeedLine {
 			Field column = getColumnAlias(columns.get(i));
 			if(column != null) {
 				try {
-					double dataValue = Double.parseDouble(data.get(i));
+					Double dataValue = Double.valueOf(data.get(i));
 					try {
 						// finally set the field to the right value
-						column.setDouble(this, dataValue);						
+						column.set(this, dataValue);						
 					}//end trying to set double field
 					catch (IllegalAccessException e) {
 						e.printStackTrace();
