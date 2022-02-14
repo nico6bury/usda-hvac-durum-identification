@@ -22,7 +22,6 @@ public class ConsoleUse {
     private static Label statusLabel;
     private static Panel controlPanel;
     private static File[] filesToImport;
-    private static String outputPath;
     public static void main(String[] args){
         SeedLine.putDefaultColumnAlias();
         prepareGUI();
