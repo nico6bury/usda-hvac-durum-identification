@@ -16,11 +16,11 @@
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
-  <parent>
+  <!-- <parent>
     <groupId>org.scijava</groupId>
     <artifactId>pom-scijava</artifactId>
     <version>30.0.0</version>
-  </parent>
+  </parent> -->
 
   <dependencies>
     <dependency>
